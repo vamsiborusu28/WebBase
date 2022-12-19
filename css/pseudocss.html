@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Selectors </title>
+    <style>
+        *{
+            background-color: #758283;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color:#B4161B;
+        }
+        h1{
+            color:#383CC1;
+            margin:auto;
+            padding:auto;
+        }
+        input{
+           background-color: white;
+           width:25%;
+          
+        }
+        button{
+            background-color: #383CC1;
+            color: white;
+            margin: 20px;
+            padding:8px;
+            font-size: 16px;
+            border: 1px solid white;
+            border-radius: 8px;
+        }
+         /* anchor tag pseudo selectors*/
+
+        /* a:visited{
+            background-color: red;
+            color:blue;
+            font-size: 20px;
+         }*/ 
+
+         a:link{
+           
+            color:blue;
+
+         }
+         a:hover{
+            background-color: white;
+            color:red;
+            font-size:20px;
+         }
+        
+        
+        /* pseudo Selectors*/
+
+        .inline-label:hover::before{
+            content:'';
+            display: block;
+            margin:10px;
+            width:50px;
+            height:50px;
+            background-color: #B4161B;
+            border-radius: 10px;
+        }
+        .btn:hover{
+            background-color: #fff;
+            color: blue;
+            border: 1px solid blue;
+        }
+
+       /* n-th child pseudo selectors*/
+
+       li:nth-child(even){
+        background-color: #383CC1;
+       }
+       li:nth-child(odd){
+        background-color: aqua;
+       }
+
+       li:first-child{
+        color: green;
+        font-size:20px;
+       }
+
+       li:last-child{
+        color:white;
+        font-size:large;
+       }
+
+       li:nth-child(2n-1){
+        padding:10px;
+       }
+       li:nth-child(2n){
+        padding: 20px;
+
+       }
+       ul li:nth-child(2n+1){
+        list-style: none;
+       }
+       .number li:nth-child(2n):hover::before{
+        content:'even child hover before';
+        display:block;
+        color:black;
+       }
+    </style>
+</head>
+<body>
+    <h1>Pseudo Selectors in html</h1>
+
+    <form  class="form" action="" method="post">
+        <label class="inline-label block" for="name">Name</label>
+        <input type="text" name="name">
+        <br>
+        <label class="block" for="email">Email</label>
+        <input type="email" name="emai">
+        <br>
+        <button class="btn" type="submit">Submit</button>
+    </form>
+
+    <a href="https:www.google.com">Google</a>
+
+    <div>
+        <ul class="number">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+            <li>11</li>
+            <li>12</li>
+            <li>13</li>
+            <li>14</li>
+            <li>15</li>
+            <li>16</li>
+            <li>17</li>
+            <li>18</li>
+            <li>19</li>
+            <li>20</li>
+        </ul>
+    </div>
+</body>
+</html>

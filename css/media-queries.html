@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+
+    <style>
+            /* general css rules applies to elements untill particular rules are overridden by media queries*/
+
+            *{
+                background-color:#242B2E ;
+            }
+           .pos{
+                background-color: black;
+                color:white;
+                width:50px;
+                height: 50px;
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom:10px;
+                text-transform: capitalize;
+                border: 1px solid white;
+            }
+            
+            h1{
+                position: absolute;
+                top:20px;
+                left:30%;
+            }
+
+           /* media Queries are one of the important concepts in Css
+              These are used to make our website responsive that means our websites can work finely on all devices
+              irrespective of screen sizes
+              By using media queries we can make necessary changes in the css styles so that our website looks good 
+              
+           */
+           @media (max-width:1000px) /*max-width:1000px means supports these css rules when screen width is <=1000px*/
+           {
+            *{
+                background-color:#CAD5E2; 
+
+            }
+            .container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap:10px;
+                height: 500px;
+                box-shadow:0 0 5px black;
+                border: 5px solid #000;
+                border-radius: 20px;
+
+            }
+             .pos{
+                background-color:#03203C ;
+             }
+           }
+           @media (min-width:200px) and (max-width:500px)  /* width is >=200px and <=500px */         
+           {
+
+              *{
+                background-color:#120E43;
+
+              }
+              .pos{
+                background-color: #12B0E8;
+              }
+           }
+           
+    </style>
+</head>
+<body>
+    <h1>Media Queries</h1>
+    <div class="container">
+        <div class="pos">div1</div>
+        <div class="pos">div2</div>
+        <div class="pos">div3</div>
+        <div class="pos">div4</div>
+    </div>
+</body>
+</html>

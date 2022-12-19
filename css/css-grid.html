@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+         *{
+            background-color:#CAD5E2 ;
+            font-family:Helvetica, sans-serif;
+            color:#242B2E;
+         }
+         h1{
+            text-align: center;
+            color: #242B2E;
+            font-weight:800;
+            font-size: xx-large;
+            
+         }
+         .grid-container{
+            
+            height: 120vh;
+            width:90vw;
+            margin:20px  auto;
+            border-radius: 3%;
+            box-sizing: border-box;
+            box-shadow: 0 0 10px #242B2E;
+            
+            /* Grid Property*/
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            border:5px solid black;
+            grid-template-rows:repeat(5,1fr);
+            grid-template-columns: repeat(4,1fr);
+         }
+         .grid-item{
+            background-color:#D82E2F ;
+            height:18vh;
+            width:18vw;
+            margin:1vh;
+            border-radius: 8%;;
+            box-shadow: 0 0  5px  #758283  ;
+            border: 1px solid rgba(0, 0, 0, 0.715);
+           
+         }
+        .grid-item:hover::before{
+            content:'This is Grid Item';
+            display: block;
+            position: relative;
+            bottom:30px;
+            font-weight: bolder;
+            color:#2827CC;
+        }
+        .grid-item:hover{
+            width:500px;
+            height:500px;
+            position: relative;
+            z-index:100;
+        }
+        .grid-item:nth-child(2n-1):hover::before{
+            bottom:20px;
+
+        }
+         
+       /* Grid 2*/
+
+       .grid2{
+        align-items:center;
+       }
+        .grid-item2{
+             background-color: #242B2E;
+             color: #CAD5E2;
+             text-align: center;
+             border-radius: 5%;
+             box-shadow: 0 0 2px black;
+             width:10vw;
+             height:10vw;
+        }
+
+        .box1{
+            background-color: red;
+            grid-column: 2;
+            grid-row:2; 
+
+        }
+         
+    </style>
+    <title>Css Grid</title>
+</head>
+<body>
+    <h1>Grid Example</h1>
+     <div class="grid-container">
+           <div class="grid-item"></div>
+           <div class="grid-item"></div>
+           <div class="grid-item"></div>
+           <div class="grid-item "></div>
+           <div class="grid-item"></div>
+           <div class="grid-item"></div>
+           <div class="grid-item"></div>
+           <div class="grid-item"></div>
+           <div class="grid-item"></div>
+           <div class="grid-item"></div>
+           <div class="grid-item"></div>
+           <div class="grid-item"></div>
+           <div class="grid-item"></div>
+           <div class="grid-item"></div>
+           <div class="grid-item"></div>
+           <div class="grid-item"></div>
+           <div class="grid-item"></div>
+           <div class="grid-item"></div>
+           <div class="grid-item"></div>
+           <div class="grid-item"></div>
+         
+    </div>
+
+    <div class="grid-container  grid2">
+              <div class="grid-item2  box1">one</div>
+              <div class="grid-item2">two</div>
+              <div class="grid-item2">three</div>
+              <div class="grid-item2">four</div>
+              <div class="grid-item2">five</div>
+              <div class="grid-item2">six</div>
+              <div class="grid-item2">seven</div>
+              <div class="grid-item2">eight</div>
+              <div class="grid-item2 box9">nine</div>
+              <div class="grid-item2 box10">ten</div>
+    </div>
+</body>
+</html>

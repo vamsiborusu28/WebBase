@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project1</title>
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+        background-color: #f5f9f5;
+    }
+    nav{
+        padding:10px 10%;
+        height:15vh;
+        /* position:fixed; */
+    }
+
+    nav ul{
+        display: flex;
+        align-items: center;
+    }
+    nav ul li{
+        list-style: none;
+        margin-right: 40px;
+    }
+
+    main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left:10%;
+        height:70vh
+    }
+    .leftmain{
+        width:40%;
+    }
+
+    .leftmain h1{
+        font-size: 67px;
+    }
+    .leftmain p{
+        margin-top:5%;
+        font-size:15px;
+    }
+    .leftmain button{
+        padding:10px 15px;
+        border:none;
+        background-color: green;
+        margin-top: 5%;
+        color: #f5f9f5;
+        font-weight: 600;
+        border-radius:5%;
+    }
+
+    .rightmain{
+        width:60%;
+        padding-left:50px
+    }
+
+    .rightmain .upperimage{
+        margin:10px;
+        height:20%;
+    }
+    .upperimage .imag2{
+        margin-left: 10px;
+        height:20%;
+    }
+    .lowerpage img{
+        height:30%;
+    }
+</style>
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><img src="./images/logo.png"></li>
+            <li>Blog</li>
+            <li>Calm Playist</li>
+            <li>Join Calm</li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Left -->
+        <div class="leftmain">
+            <h1>Be Focus and Productive</h1>
+            <p>Not just an ordinary headphones.It's designed for mediation</p>
+            <button>Learn More</button>
+        </div>
+
+        <!-- Right -->
+        <div class="rightmain">
+            <div class="upperimage">
+                <img src="./images/img1.png">
+                <img src="./images/img2.png" alt="image2" class="imag2">
+            </div>
+           <div class="lowerpage">
+            <img src="./images/img3.png" alt="" class="image3">
+           </div>
+        </div>
+    </main>
+</body>
+</html>

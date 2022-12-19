@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Selectors</title>
+    <style>
+    /*Global Selector*/
+     *{
+        background-color: #03203C;
+        color:white;
+        padding:0;
+     }
+     
+
+     /*Individual Selector*/
+
+     body{
+        margin: auto;
+        
+     }
+     h1{
+        background-color: rgb(11, 10, 10);
+        color:#e91d38;
+        margin-bottom:20px;
+     }
+     /* Class and Id selectors*/
+     .headings{
+        width:50%;
+        margin:auto;
+        background-color:black;
+        border-radius: 20px;;
+        padding:10px;
+     }
+     #idselector{
+        background-color: aquamarine;
+        margin:auto 2px;
+        padding:2px;
+        color:black;
+
+     }
+     
+     .list-last{
+        padding: 5px;
+     }
+
+    /* And/Chained Selectors*/
+    dh.bg-white.color-red{
+        background-color: #242B2E;
+        color:#e91d38;
+        margin:5px;
+        margin-bottom:10px;
+        font-size: 16px;
+        padding:auto;
+    }
+    dd.bg-black.color-white{
+        background-color: aquamarine;
+        padding: auto;
+        color: #242B2E;
+        font-weight: 600;
+
+    }
+
+
+    /* Inside the element*/
+    div{
+        box-shadow: 0px 0px 10px black;
+        border-radius: 20px;
+    }
+    div p{
+        background-color: #0D0D0D;
+        color:whitesmoke;
+        margin: 10px;
+        padding:auto;
+        font-weight: 400;
+        border-radius:5px;
+    }
+    section dh{
+        background-color: #CAD5E2;
+        margin:20px;
+        color: #0d0b0f;
+        display: block;
+        width:40%;
+        font-size: 18px;
+        font-weight: 600;
+        padding:5px;
+    }
+    /* Combined selecot*/
+    section dd, div ul li{
+        background-color: #e91d38;
+        font-weight: 500;
+        margin: auto;
+        list-style: none;
+        padding: 8px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        display: block;
+        width:50%;
+    }
+
+    /* Direct Child*/
+    div>li{
+        color: black;
+        list-style: none;
+        
+    }
+   /* Direct child and combined selector*/
+    div>li,.black>p{
+        font-weight: 600;
+        color: black;
+        font-size:24px;
+    }
+
+    /* Pseudo Selectors */
+
+    /* Pseudo Selectors are used to select the space above/below a particular element and make some styling around that space 
+
+    Inorder Pseudo Selectors to work we should specify two properties in the css
+    1. content:'';
+    2.display:block;
+    */
+
+
+   /* Before */
+
+   
+   .black-lorem::before{
+    content: '';
+    display: block;
+    height:20px;
+    margin-bottom: 10px;
+   }
+
+   .black-lorem:hover::before{
+    content: 'Before Example';
+    background-color: red;
+    font-size:15px;
+    color:aliceblue
+   }
+    
+   .description:hover::before{
+    content: 'It is the Application of Pseudo Selecor before';
+    display: block;
+    height: 20px;
+    font-size: 15px;
+    margin: 10px;
+    background-color: green;
+   }
+   
+   /* after*/
+   
+   .description::after{
+    content: 'It is the application of Pseudo Selector After';
+    display: block;
+    font-weight: 400;
+    color: white;
+    background-color: black;
+    height:50px;
+    margin-top:20px;
+   }
+   /*.list-last::after{
+    content:'';
+    display: block;
+    margin-top: 20px;
+   }*/
+</style>
+</head>
+<body>
+    <h1>Hi Welocome to Css Selectors</h1>
+
+    <div class="headings">
+        <p>Global Selectors</p>
+        <p>Individual Selectors</p>
+        <p id="idselector"> Class and id Selectors</p>
+        <p >And Selectors</p>
+        <p>Combined Selectors</p>
+        <p>Inside an element</p>
+        <p>direct child</p>
+        <p>Sibling Selectors</p>
+    </div>
+    <section class="black">
+        <p class="description">Description about Selectors</p>
+        <dl>
+            <dh class="bg-white color-red">Global Selectors</dh>
+            <dd class="bg-black color-white">Select the entire html documnet</dd>
+            <dh>class and id selector</dh>
+            <dd  class="bg-black color-white">Select the elements with specific class and id</dd>
+            <dh class="bg-white color-red">Chained/And selector</dh>
+            <dd>Select the elements which supports all the selecting properties</dd>
+            <dh>Combined Selector</dh>
+            <dd>We want to apply same css properties to 2 or more elements we use combined selector</dd>
+            <dh class="bg-white color-red">Inside the element</dh>
+            <dd  class="bg-black color-white" >Select the elments which is present in another elements</dd>
+            <dh >Direct Child</dh>
+            <dd>Select the elements which is the direct child of another element</dd>
+        </dl>
+    </section>
+    <div class="black">
+        <li class="black-lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt vero sequi error sapiente at?</li>
+        <ul class="list-last">
+            <li>vjhvheevhviue</li>
+            <li>vjhvheevhviue</li>
+            <li>vjhvheevhviue</li>
+            <li>vjhvheevhviue</li>
+            <li>vjhvheevhviue</li>
+            <li >vjhvheevhviue</li>
+        </ul>
+    </div>
+</body>
+</html>

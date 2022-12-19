@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docter Website</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #f0f4f5;
+            max-width: 1440px;
+            margin:auto;
+           /* overflow: hidden; */
+        }
+        nav{
+            height:15vh;
+            /* background-color: aqua; */
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            padding:0 5%;
+
+        }
+        nav ul{
+            display:flex;
+            align-items: center;
+
+        }
+        nav ul li{
+            list-style:none;
+            margin-right:50px;
+            font-weight:600;
+        }
+        nav ul li:first-child{
+            color:green;
+        }
+
+        main{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            height:85vh;
+            /* background-color: red; */
+        }
+        main section{
+            width:50%;
+            
+        }
+        
+        .left-side{
+            margin-left:5%;
+            position: relative;
+            /* background-color: blue; */
+        }
+        .top-angle{
+            width:25px;
+        }
+        .left-side h1{
+            font-size:70px;
+        }
+        .left-side p{
+            color:#808080;
+            font-size:18px;
+            margin:20px 0;
+        }
+
+        .bottom-angle{
+            width:25px;
+            position: absolute;
+            right:25px;
+            
+        }
+        .stethscope{
+            position: absolute;
+            width: 90%;
+            top: -60px;
+            right: -25px;
+            z-index: -1;
+        }
+        .mouse{
+            position:absolute;
+            right:0px;
+            bottom:0;
+            width:30px;
+        }
+
+        button{
+        color: white;
+        background-color: green;
+        padding: 15px 40px;
+        border: none;
+        border-radius: 40px;
+        font-size: 25px;
+        }
+        
+       /*  Right Side */
+.greenbox,  .yellowbox{
+    position: absolute;
+    right: 0;
+}
+.greenbox{
+    width: 35%;
+    bottom: 30px;
+}
+.yellowbox{
+    width: 30%;
+    bottom: 50px;
+}
+
+
+.doctor{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 90%;
+}
+    </style>
+ 
+</head>
+<body>
+
+    <!-- Nav Bar -->
+    <nav>
+        <img src="./images/logo.png" alt="Logo">
+        <ul>
+            <li class="list-item">Home</li>
+            <li class="list-item">About Us</li>
+            <li class="list-item">Services</li>
+            <li class="list-item">Contact Us</li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <main>
+
+        <!-- Left Side -->
+        <section class="left-side">
+           <img src="./images/topAngle.png" alt="" class="top-angle">
+           <h1>Complete Health Care Solutions for Everyone</h1>
+           <p>We're always available for patients who are having emergecy problems.You
+            can reach us 24/7.We focused on high quality.
+           </p>
+           <img src="./images/bottomAngle.png" alt="" class="bottom-angle">
+           <img src="./images/stethoscope.png" alt="" class="stethscope">
+           <button>Make Appointment</button>
+           <img src="./images/mouse.png" alt="" class="mouse">
+        </section>
+
+        <!-- Right Side -->
+        <section class="right-side">
+            <img src="./images/greenBox.png" alt="" class="greenbox">
+            <img src="./images/yellowBox.png" alt="" class="yellowbox">
+            <img src="./images/doctor.png" alt="" class="doctor">
+        </section>
+    </main>
+</body>
+</html>

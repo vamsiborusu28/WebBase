@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height:20vh;
+    padding:0 5%;
+    margin-left: 5%;
+}
+nav>div>ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+nav>div>ul li{
+    list-style: none;
+    margin-right: 30px;
+    font-size:20px;
+}
+.button-group{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:10px;
+}
+.button-group div .nav-button{
+    padding:10px 15px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius:6%;
+    color:grey;
+    font-size: 16px;
+}
+.hero-container{
+    margin: 0 10%;
+    margin-top:6vh;
+    display:flex;
+    gap:20px;
+    height:80vh;
+    position: relative;
+    justify-content: space-between;
+    /* background-color: aquamarine; */
+    
+}
+
+.hero-container-left {
+    width:40%;
+    position: relative;
+    margin-right:10% ;
+    /* background-color: red; */
+}
+.hero-container-left img{
+    position:absolute;
+    top:0;
+    width: 80%;
+    
+    
+}
+.hero-container-left .square img{
+    position: absolute;
+    width:80%;
+    z-index:-2;
+    right:-20px;
+    bottom:-20px;
+    
+}
+.star{
+    position: absolute;
+   
+
+}
+.star1{
+    top:-60px;
+    right:220px;
+}
+
+.star img{
+    width:40px;
+}
+
+.star2{
+   bottom: 250px;
+   left:500px;
+   
+}
+.globe{
+    position: absolute;
+    top:-100px;
+    left:680px;
+}
+.globe img{
+    width:50px;
+}
+.hero-container-right{
+    width:50%;
+}
+.hero-container-right h1{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.hero-container-right p{
+    font-size: 15px;
+    color:grey;
+    margin-bottom:50px ;
+}
+
+.hero-container-right .form-group{
+    display: flex;
+    align-items: center;
+    gap:20px;
+}
+.form-group .button-email{
+    padding:7px 12px;
+    color:black;
+    font-size: 15px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius:10px;
+}
+.form-group .button-join{
+    padding:5px 10px;
+    color:white;
+    font-size: 15px;
+    background-color: black;
+    border: 1px solid black;
+    border-radius:10px;
+}
+.form-group{
+    margin-bottom: 20px;
+}
+.hero-container-right h4{
+    margin:0 10%;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.hero-container-right .contact {
+    margin:10px 20%;
+}
