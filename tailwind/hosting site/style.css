@@ -1,0 +1,10 @@
+.list-item{
+    list-style: url('./Project-2\ Hosting\ Site/assets/Icons/blue-tick.svg');
+    list-style-position: inside;
+    
+}
+
+.second-box ul li {
+    list-style: url('./Project-2\ Hosting\ Site/assets/Icons/white-tick.svg');
+    list-style-position: inside;
+}
