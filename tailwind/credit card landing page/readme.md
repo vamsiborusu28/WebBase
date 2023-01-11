@@ -1,5 +1,7 @@
-# Replicate the Following Output
+## ** Live website link for credit card page is**
 
-`Assests are Provided!`
+[Click Here To View](https://vamsiborusu-creditcardpageclone.netlify.app/)
+
+## Output of The Code is
 
 ![Project 1](./Credit%20card%20landing%20page.png)
