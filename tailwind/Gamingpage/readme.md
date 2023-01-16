@@ -1,5 +1,7 @@
-# Replicate the Following Output
+## **Click below link visit the Live Website**
 
-`Assests are Provided!`
+[Click Here](https://vamsiborusu-gamingpage-clone.netlify.app/)
+
+## Output of this Project
 
 ![Project 3](./Gaming%20Landing%20Page.png)
