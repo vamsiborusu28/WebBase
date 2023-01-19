@@ -25,3 +25,54 @@ const restuarent={
 }
 
 restuarent.details();
+
+
+//2nd Way using object Constructer
+//Example const objectName=new Object();
+
+const Account=new Object(
+{
+    name:'vamsiborusu',
+    accNo:'UNIB70010234',
+    balance:5000,
+    IFSCCODE:'UNIB1704',
+    branchName:'GVPT',
+    trans:[],
+    accountDetails(){
+        console.log(
+            `
+            Account Holder Name:${this.name}\n
+            Account NO:${this.accNo}\n
+            IFSC Code:${this.IFSCCODE}\n
+            Branch Name:${this.branchName}\n
+            Account Balance:${this.balance}\n
+            Transaction Details: ${this.trans.join(" ")}
+            `
+        );
+    },
+
+    deposit(amount){
+        this.balance+=amount;
+        this.trans.push(amount);
+    },
+    withdraw(amount){
+        if(this.balance-amount<0){
+            console.log('Cant Possible to WithDraw');
+            return;
+        }
+        this.balance-=amount;
+        this.trans.push(-amount);
+    }
+
+});
+
+Account.accountDetails();
+
+
+Account.deposit(100);
+Account.deposit(300);
+Account.deposit(500);
+Account.deposit(350);
+
+
+Account.accountDetails();
