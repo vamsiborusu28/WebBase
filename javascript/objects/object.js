@@ -98,3 +98,26 @@ console.log(tata);
 
 const suzuki=new car('Dzire',1000000,'30/ltr');
 console.log(suzuki);
+
+
+
+// Using Object.Create() method
+
+const got=Object.create(null);
+got.fullName='Game Of Thrones';
+got.creater='George Martin';
+got.mainCharacters=['Jon Snow','Arya Stark','Tiryon Lannister','Sansa Stark',];
+got.display=function(){
+    console.log(`
+    ${this.fullName} ${this.creater}
+    ${this.mainCharacters}`)
+};
+console.log(got.display());
+console.log(got);
+
+
+const hod=Object.create(got);
+hod.fullName='House Of Dragons';
+hod.mainCharacters=['Daemon Targeryon','Rheana Targeryon','Aegon Targeryon',];
+console.log(hod.display());
+console.log(got);
