@@ -81,3 +81,20 @@ Account.withdraw(350);
 
 
 Account.accountDetails();
+
+
+
+// Using a constructer function
+
+
+function car(model,price,milege){
+    this.model=model;
+    this.price=price;
+    this.milege=milege;
+}
+
+const tata=new car('Nexon',2000000,'20/ltr');
+console.log(tata);
+
+const suzuki=new car('Dzire',1000000,'30/ltr');
+console.log(suzuki);
