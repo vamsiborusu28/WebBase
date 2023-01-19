@@ -74,5 +74,10 @@ Account.deposit(300);
 Account.deposit(500);
 Account.deposit(350);
 
+Account.withdraw(300);
+Account.withdraw(100);
+Account.withdraw(500);
+Account.withdraw(350);
+
 
 Account.accountDetails();
