@@ -83,6 +83,12 @@ Account.withdraw(350);
 Account.accountDetails();
 
 
+// part 2
+const vamsi=new Object();
+vamsi.name='vb';
+vamsi.age=22;
+console.log(vamsi);
+
 
 // Using a constructer function
 
@@ -120,4 +126,19 @@ const hod=Object.create(got);
 hod.fullName='House Of Dragons';
 hod.mainCharacters=['Daemon Targeryon','Rheana Targeryon','Aegon Targeryon',];
 console.log(hod.display());
-console.log(got);
+console.log(Object.getPrototypeOf(hod));
+
+
+//part 4
+
+const obj4=Object.create({});
+Object.defineProperty(obj4,'name',{
+    //set : () => this.book='vamsi',
+    get : () => 'song of ice and fire',
+    enumerable: true
+});
+console.log(obj4);
+console.log(obj4.name);
+obj4.author='George Martin';
+console.log(obj4.author);
+console.log(obj4);
