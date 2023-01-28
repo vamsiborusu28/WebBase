@@ -27,8 +27,8 @@
             }
             .btn{
                 background-color: #0D0D0D;
-                border-radius: 5%;
-                border: 1px solid whitesmoke;
+                border-radius: 8%;
+                border: 1px solid #0D0D0D;
                 padding: 20px;
                 color:#CAD5E2;
                 font-size: medium;
@@ -39,7 +39,9 @@
                 gap:20px;
                 padding: 10px;
             }
-
+            .hrmargin{
+                margin: 10px 25%;
+            }
     </style>
 </head>
 <body class="bg-color">
@@ -108,12 +110,16 @@
                 para.style.fontSize="20px";
                 sec.appendChild(para);
             }
+            const hr=document.createElement('hr');
+            hr.style.width="50%";
+            hr.className='hrmargin';
+            sec.appendChild(hr);
             
 
         };
 
         const btn=document.querySelector('.btn-2');
-        btn.addEventListener('click',math2);
+        btn.addEventListener('dblclick',math2);
 
 
 
@@ -125,9 +131,21 @@
 
         1. Event Name means what type of event is this like click event,mouse event etc;
         2.Whoom should i call like a callback function.
+          
+        Types of Events
 
+        Click
+        dblclick
+        mouseenter
+        mouseleave
+        moveover
+        input
+        keydown
+        keyup
+        keypress
+        onload
 
-        */
+    */
        
     </script>
 </body>
