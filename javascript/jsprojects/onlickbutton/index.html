@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onclick Events</title>
+    <style>
+            *{
+                margin: 0;
+                padding:0;
+                box-sizing: border-box;
+            }
+            .bg-color{
+                background-color: #120E43;
+                margin: auto;
+                padding: auto;
+                color: #CAD5E2;
+                font-size: 2rem;
+                font-weight: 700;
+            }
+            div{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 20px;
+            }
+            .btn{
+                background-color: #0D0D0D;
+                border-radius: 5%;
+                border: 1px solid whitesmoke;
+                padding: 20px;
+                color:#CAD5E2;
+                font-size: medium;
+            }
+            section{
+                display: grid;
+                grid-template-columns: 1;
+                gap:20px;
+                padding: 10px;
+            }
+
+    </style>
+</head>
+<body class="bg-color">
+    <h1 style="text-align:center;margin-bottom: 10px;">
+        Onclick Button Events
+    </h1>
+
+    <div>
+    <button class="btn" onclick="math()">
+        Click Here
+    </button>
+    </div>
+
+    <div >
+        <!-- <button class="btn-2 btn" onclick="math2()">
+            Press Here
+        </button> -->
+
+        <button class="btn-2 btn">
+            Press Here
+        </button>
+    </div>
+     <section class="para">
+
+     </section>
+    <script>
+        
+
+        // First Button Action Method
+         function math(){
+            const x1=Math.trunc(Math.random()*100);
+            const x2=Math.trunc(Math.random()*50);
+            const res=x1-x2;
+            let ans=prompt(`Find ${x1}-${x2}`);
+            ans=parseInt(ans);
+            // console.log(res,ans);
+            // console.log(typeof(res),typeof(ans));
+
+            if(ans===res){
+                const p=document.createElement('p');
+                p.textContent=`You did great the ans ${x1-x2}`;
+                p.style.textAlign='center';
+                p.style.color='#66AD47';
+                document.body.appendChild(p);
+            }
+            else{
+                const p=document.createElement('p');
+                p.textContent=`You answer is wrong \n Actual answer is ${x1-x2}`;
+                p.style.textAlign='center';
+                p.style.color='#B4161B';
+                document.body.appendChild(p);
+            }
+           
+        }
+
+        //Second Button Action Method
+        let math2=function(){
+            let ans =prompt("What's Your favourite number");
+            ans=parseInt(ans);
+            let sec=document.querySelector('.para');
+            for(let i=1;i<=ans;i++){
+                const para=document.createElement('h5');
+                para.textContent=`Current Number is ${i}`;
+                para.style.textAlign='center';
+                para.style.fontWeight='500';
+                para.style.fontSize="20px";
+                sec.appendChild(para);
+            }
+            
+
+        };
+
+        const btn=document.querySelector('.btn-2');
+        btn.addEventListener('click',math2);
+
+       
+    </script>
+</body>
+</html>
