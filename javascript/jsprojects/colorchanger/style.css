@@ -1,0 +1,30 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: black;
+    font-size:large;
+    font-weight: 600;
+    color:#CAD5E2;
+}
+
+.container{
+    margin-top: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    background-color:#CAD5E2;
+    padding:20px 30px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    color:#CAD5E2;
+    font-size:large;
+    font-weight: 600;
+}
