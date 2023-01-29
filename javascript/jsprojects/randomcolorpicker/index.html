@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #087699;
+        }
+        .container{
+            display: flex;
+            margin: 25%;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .btn{
+            padding:20px 30px;
+            background-color: black;
+            border:1px solid #CAD5E2;
+            color:#CAD5E2;
+            border-radius:10px;
+            font-size:large;
+            font-weight:700;
+            box-shadow: 0 0 5px #242B2E;
+        }
+    </style>
+    <title>Random Color Generator</title>
+
+</head>
+<body>
+    <div class="container">
+        <button class="btn">
+            Generate
+        </button>
+    </div>
+
+
+   <script>
+    const btn=document.querySelector('.btn');
+
+    const colorGenerater=function(){
+        const hexaCode="0123456789ABCDEF";
+        let code='#';
+        for(let i=0;i<6;i++){
+            code=code+hexaCode[Math.floor(Math.random()*16)];
+
+        }
+        document.body.style.backgroundColor=code;
+        btn.style.color=code;
+
+
+    };
+
+    btn.addEventListener('click',colorGenerater);
+   </script> 
+</body>
+</html>
