@@ -4,10 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Variables</title>
+    <title>Random Colors</title>
+    <style>
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20%;
+        }
+        .btn{
+            border:1px solid #CAD5E2;
+            border-radius: 10px;
+            padding: 20px 30px;
+            background-color: black;
+            color:#CAD5E2;
+            font-size:20px;
+            font-weight:600;
+        }
+    </style>
 </head>
 <body style="background-color:black">
-    
+    <div class="container">
+        <button class="btn">Hi there! I am Vamsi you can call me VB</button>
+    </div>
 
 
 <script>
@@ -19,9 +38,11 @@
 
         }
         document.body.style.backgroundColor=count;
+        document.querySelector('.btn').style.color=count;
+        document.querySelector('.btn').style.boxShadow=`0 0 10px count`;
         
     };
-    setInterval(randomColor,300);
+    setInterval(randomColor,400);
 
 
 </script>
