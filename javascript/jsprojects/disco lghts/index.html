@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Variables</title>
+</head>
+<body style="background-color:black">
+    
+
+
+<script>
+    const randomColor=function(){
+        let hexCode="0123456789ABCDEF";
+        let count="#";
+        for(let i=0;i<6;i++){
+            count+=hexCode[Math.trunc(Math.random()*16)];
+
+        }
+        document.body.style.backgroundColor=count;
+        
+    };
+    setInterval(randomColor,100);
+
+
+</script>
+</body>
+</html>
