@@ -78,6 +78,7 @@
       /* Third Assignment*/
       
       /*Main Left*/
+      /*
       const enterName=document.querySelector('.enterName');
       const enterMail=document.querySelector('.enterMail');
       const enterMessage=document.querySelector('.enterMessage');
@@ -85,9 +86,10 @@
       enterName.setAttribute('placeholder','FSJS 2.0');
       enterMail.setAttribute('placeholder','fsjs@ineuron.ai');
       enterMessage.setAttribute('placeholder','Hello World');
-
+      */
 
       /*Main Right*/
+      /*
       const userName=document.querySelector('.userName');
       const userEmail=document.querySelector('.userEmail');
       const userMessage=document.querySelector('.userMessage');
@@ -95,7 +97,50 @@
       userName.setAttribute('placeholder','FSJS 2.0');
       userEmail.setAttribute('placeholder','fsjs@ineuron.ai');
       userMessage.setAttribute('placeholder','Hello World');
+      */
 
+      //Submit Form
+      const userName=document.querySelector('.userName');
+      const userEmail=document.querySelector('.userEmail');
+      const userMessage=document.querySelector('.userMessage');
+      //Reset Form
+      const enterName=document.querySelector('.enterName');
+      const enterMail=document.querySelector('.enterMail');
+      const enterMessage=document.querySelector('.enterMessage');
+
+
+      const reset=document.querySelector('.mainLeftDetails>button')
+      const submit=document.querySelector('.mainRight>form>button');
+
+
+
+      // Submit Form Logic
+      const submitForm=(event) =>{
+        //event.preventDefault();
+        const name=userName.value;
+        const email=userEmail.value;
+        const message=userMessage.value;
+        console.log(userEmail,userName,userMessage);
+        console.log(name+" "+email+" "+message+"vamsi");
+        enterName.value=name;
+        enterMail.value=email;
+        enterMessage.value=message;
+      };
+
+
+      // Reset Form Logic
+      const resetForm=(event) => {
+        //event.preventDefault();
+        userName.value='';
+        userEmail.value = '';
+        userMessage.value = '';
+
+      };
+
+
+      submit.addEventListener('click',submitForm);
+
+     reset.addEventListener('click',resetForm);
     
 
     </script>
