@@ -7,6 +7,8 @@ But we want to wait  for the partiuclar process need to be completed then promis
 Promises 
 Primise have two states resolved rejected
 promise resolve reject async await
+
+https://restcountries.com/v2/all
 */
 
 
