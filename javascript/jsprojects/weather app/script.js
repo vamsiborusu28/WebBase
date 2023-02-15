@@ -1,138 +1,91 @@
-// Get Data from API
 
-let cityCount=0;
+// Weather App using Fetch API
 
 
-// select input and output elements using dom
+// selecting input city element
 
 const city=document.querySelector('#inputBox');
-const table=document.querySelector('tbody');
+const tbody=document.querySelector('tbody');
+let cityCount=0;
+//selecting output labels element
 
-
-// Output Labels
-
-const countryName=document.querySelector('#countryName');
-const stateName=document.querySelector('#stateName');
+const country=document.querySelector('#countryName');
+const state=document.querySelector('#stateName');
 const cityName=document.querySelector('#cityName');
 const humidity=document.querySelector('#humidity');
 const windSpeed=document.querySelector('#windSpeed');
 const temparature=document.querySelector('#temprature');
-const logoImage=document.querySelector('#logoImage');
+const logo=document.querySelector('#logoImage');
 const weatherStatus=document.querySelector('#weatherStatus');
 
 
 
-const updateWeatherTable = function(weatherObj){
-  // weatherInfo.forEach((element)=>{
-  //   const tr=document.createElement('tr');
-  //   for(const key in element){
-  //     const td=document.createElement('td');
-  //     td.innerText=element[key];
-  //     tr.appendChild(td);
-  //   }
-  //   table.appendChild(tr);
-  // });
+const updateWeatherTable =(weatherinfo) =>{
   cityCount++;
-  const tr=document.createElement('tr');
-  for(const key in weatherObj){
+  const tablerow=document.createElement('tr');
+  tablerow.style.fontWeight='600';
+  tablerow.style.fontSize='14px';
+  tablerow.style.color='#e11d48';
+  for(const key in weatherinfo){
     const td=document.createElement('td');
-    // if(key==='Logo'){
-    //   const img=document.createElement('img');
-    //   img.src=weatherObj[key];
-    //   td.appendChild(img);
-    // }
-    
-    if(key=='Logo'){
-      // console.log(key);
+    if(key=== 'logo'){
       const img=document.createElement('img');
-      img.src=weatherObj[key];
+      img.src=weatherinfo[key];
+      img.style.width='50px';
       td.appendChild(img);
-      tr.appendChild(td);
     }
     else{
-      td.innerText=weatherObj[key];
-      tr.appendChild(td);
-    
+      td.innerText=weatherinfo[key];
     }
-    
+    tablerow.appendChild(td);
   }
-  table.appendChild(tr);
-  if(cityCount%2!==0){
-    tr.style.color='#22CB5C';
+  if(cityCount%2===0){
+    tablerow.style.color='#0284c7';
   }
-
-
+  tbody.appendChild(tablerow);
 }
 
-const printWeather=function(){
-  weatherInfo.forEach((ele) =>{
-    console.log(ele);
-  })
-  console.log('\n');
-}
 
-const getData= async function(event){
+const getData=async function(event){
   event.preventDefault();
   console.log(city.value);
-  if(!city.value) {
-    alert('Please Enter City Name');
-    return;
+  if(!city.value){
+    alert('Please enter city name');
+     return;
   }
   const url=`http://api.weatherapi.com/v1/current.json?key=f8a76fc70f5541e3a18114149231402&q=${city.value}`;
+  const fetchData=await fetch(url); // fetchData is not a function it gives raw data its type is response
+  //console.log(fetchData);
 
-  const fetchData= await fetch(url);
-  const orgData= await fetchData.json();
-  // console.log(data);
-  //const orgData=fetchData.then((response) => response.json());
-  console.log(orgData);
-  const currentData=orgData.current;
-  const locationData=orgData.location;
-  console.log(currentData,locationData);
-  //Upper Row Data
-  countryName.innerText=locationData.country;
-  stateName.innerText=locationData.region;
-  cityName.innerText=locationData.name;
+  //const cityData=await fetchData.then((response) => response.json());
+  const cityData=await fetchData.json();
+  console.log(cityData);
+
+  const currentData=cityData.current;
+  const locationData=cityData.location;
+
+
+  // Creating table object for table element
+  const weatherinfo={};
+  // Assigning the values to the labels
+
+  // location Data labels country ,name ,region
+  weatherinfo['city']=cityName.innerText=locationData.name;
+  weatherinfo['country']=country.innerText=locationData.country;
+  weatherinfo['state']= state.innerText=locationData.region;
   
-  //Lower Row Data
-  humidity.textContent=currentData.humidity;
-  windSpeed.innerText=currentData.wind_kph;
-  temparature.textContent=currentData.temp_c;
 
-
-  //Logo Change
-  logoImage.src=currentData['condition'].icon;
-  weatherStatus.innerText=currentData.condition.text;
+  // current Data Labels condition -> icon,text humidity temp_c wind_kph 
+  weatherinfo['humidity']=humidity.innerText=currentData.humidity;
+  weatherinfo['windspped']=windSpeed.innerText=currentData.wind_kph;
+  weatherinfo['temparture']= temparature.innerText=currentData.temp_c;
   
-  const WeatherObj={
-    Country:countryName.innerText,
-    City:cityName.innerText,
-    State:stateName.innerText,
-    Humidity:humidity.innerText,
-    WindSpeed:windSpeed.innerText,
-    Temparature:temparature.innerText,
-    Logo:logoImage.src,
-    weatherStatus:weatherStatus.innerText
-    
-  }
 
-  //weatherInfo.push(WeatherObj);
-  updateWeatherTable(WeatherObj);
-  //printWeather()
-}
+  weatherinfo['logo']=logo.src=currentData.condition.icon;
+  logo.style.width='60px';
+  weatherinfo['status']=weatherStatus.innerText=currentData.condition.text;
 
-const changeBackground=function(){
-  let str="#";
-  for(let i=0;i<6;i++){
-    const x=Math.trunc((Math.random()*10));
-    str+=x;
-  }
-  document.body.style.backgroundColor=str;
+ // Calling update Table Method;
+ updateWeatherTable(weatherinfo);
 
-}
-// setInterval(changeBackground,100);
-
-
-
-
-
-
+};
