@@ -11,54 +11,51 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: start;
-  /* justify-content: center; */
-  background-color: black;
+  justify-content: center;
+  background-image: url('weather.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
   color:#f3f3f3;
-  font-family:'helvetica';
 }
 
 /* designing the weather app container */
 .container {
-
-  width: 600px;
+  /* width: 600px; */
   border: 2px solid #f3f3f3;
+  border-radius: 20px;
   display: flex;
+  background-color: black;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 25px;
   padding: 15px;
-  border-radius: 20px;
-  margin-top:50px;
-  box-shadow: 0 0 20px #242B2E;
+  box-shadow: 0 0  10px #bfdbfe;
+  margin-bottom: 50px;
+}
 
-}
-h1{
-  color: #5DA3FA;
-}
 /* designing the search area */
-.searchData {
-  border: 1px solid black;
-}
+
 
 .searchData input {
   border: 1px solid white;
-  padding: 5px;
   background-color:black;
-  color:#5DA3FA;
-  font-weight: bold;
+  color:#f3f3f3;
+  border-radius: 2px;
+  padding: 5px;
+  margin-right: 5px;
 }
 
 .searchData button {
   border: 1px solid white;
+  background-color: black;
+  color:#f3f3f3;
   padding: 5px 15px;
   cursor: pointer;
-  border-radius: 5%;
-  background-color:black;
-  color:#5DA3FA;
 }
-
+h1{
+  color:#f3f3f3;
+}
 /* designing the city weather data */
 .cityWeatherData {
   display: flex;
@@ -81,46 +78,20 @@ h1{
   gap: 5px;
 }
 
-p:nth-child(odd){
-  color:#5DA3FA;
-}
+
 p:nth-child(even){
-  color:#CAD5E2;
+  color:#38bdf8;
 }
 
-
-/* Past Info */
-.pastInfo{
-  /* width:680px; */
-  margin:25%;
-  margin-top:70px ;
-  padding:20px;
-  background-color: #242B2E;
-  color:#CAD5E2;
-  border-radius: 0%;
-  border: 1px solid #f3f3f3;
-  /* height: 1000px; */
-  display:block;
-  /* overflow: scroll; */
- 
-
-}
-table{
-  border-spacing: 10px;
-  /* width:100%; */
+/* table Component*/
+.table-comp{
+  background-color: #bfdbfe;
+  width:800px;
+  color:#1e40af;
+  border-radius:20px;
+  height: 50vh;
   overflow: scroll;
 }
-/* 
-tr{
-  display: flex;
-  justify-content: space-around; 
-  align-items: center;
-  text-align: center;
-  gap:40px;
-  width:100%;
-  margin-bottom: 20px;
-}  */
-
-
-
-
+table{
+  border-spacing: 20px;
+}
