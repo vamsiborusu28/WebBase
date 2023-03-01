@@ -85,12 +85,14 @@ p:nth-child(even){
 
 /* table Component*/
 .table-comp{
-  background-color: #bfdbfe;
+  /* background-color: #bfdbfe; */
+  background-color: #242B2E;
   width:800px;
-  color:#1e40af;
+  color:#CAD5E2;;
   border-radius:20px;
   height: 50vh;
   overflow: scroll;
+  padding: 10px;
 }
 table{
   border-spacing: 20px;

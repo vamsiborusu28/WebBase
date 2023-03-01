@@ -24,7 +24,7 @@ const updateWeatherTable =(weatherinfo) =>{
   cityCount++;
   const tablerow=document.createElement('tr');
   tablerow.style.fontWeight='600';
-  tablerow.style.fontSize='14px';
+  tablerow.style.fontSize='16px';
   tablerow.style.color='#e11d48';
   for(const key in weatherinfo){
     const td=document.createElement('td');
