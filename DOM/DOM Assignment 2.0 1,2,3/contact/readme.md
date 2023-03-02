@@ -58,3 +58,25 @@ const rightButton=document.createElement('button');
 rightButton.textContent='Support me'
 taskButton.appendChild(rightButton);
 ```
+
+# **Second Assignment**
+
+### Task1
+
+```
+
+```
+
+### Task2
+
+```
+
+```
+
+# **Third Assignment**
+
+### Task 1
+
+```
+
+```
