@@ -27,3 +27,12 @@ aside.appendChild(hr);
 aside.appendChild(h2);
 aside.appendChild(para);
 ```
+
+## **Task 2**
+
+```
+//Second task
+
+const body=document.querySelector('body');
+body.style.backgroundImage='none';
+```
