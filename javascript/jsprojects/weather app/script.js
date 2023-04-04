@@ -53,7 +53,7 @@ const getData=async function(event){
     alert('Please enter city name');
      return;
   }
-  const url=`http://api.weatherapi.com/v1/current.json?key=f8a76fc70f5541e3a18114149231402&q=${city.value}`;
+  const url=`http://api.weatherapi.com/v1/current.json?key=192ebe4db1b94c3aaf283624231002&q=bhimavaram`;
   const fetchData=await fetch(url); // fetchData is not a function it gives raw data its type is response
   //console.log(fetchData);
 
