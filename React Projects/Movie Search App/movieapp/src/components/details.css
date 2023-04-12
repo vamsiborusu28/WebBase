@@ -1,0 +1,23 @@
+body{
+    font-family: Helvetica;
+}
+
+h3{
+    font-weight: bold;
+    /* font-size: 20px; */
+    text-align: center;
+    color:red;
+  
+}
+span{
+    font-size:18px;
+    font-weight:400;
+    text-align: center;
+    color:red;
+}
+p{
+    text-align: center;
+}
+.not-text{
+    text-align: start;
+}
