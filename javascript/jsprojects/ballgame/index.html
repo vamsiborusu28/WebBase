@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball Game</title>
+    <style>
+        *{
+            font-family: 'Helvetica';
+        }
+        section{
+            border:1px solid black;
+            width:80vw;
+            height: 90vh;
+            margin: 2% 10vw;
+            color: white;
+            background-color: black;
+
+        }
+        h1{
+            font-size: 30px;
+            text-align: center;
+            color:black;
+        }
+        .yellow{
+            background-color: yellow;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .red{
+            background-color: red;
+        }
+        .green{
+            background-color: green;
+        }
+        .canvas-element{
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 2vw;
+            align-items: center;
+            margin-bottom: 2vh;
+        }
+        .ball{
+            width: 8vw;
+            height: 8vw;
+            border: 1px solid black;
+            /* background-color: yellow; */
+            border-radius: 100%;
+        }
+        .arrow{
+            font-size:50px;
+        }
+        .grey{
+            background-color: grey;
+        }
+        button{
+            
+            /* bottom: 10px; */
+            margin-left:80%;
+            padding: 10px 40px;
+            box-shadow: 0 0 10px black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bubbles App</h1>
+    <section class="canvas">
+      
+        
+        <div class="canvas-element">
+            <div class="ball  yellow"></div>
+            <div class="arrow" >&larr;</div>
+        </div>
+        <div class="canvas-element ">
+            <div class="ball  blue"></div>
+            <div class="arrow" >&larr;</div>
+        </div>
+        <div class="canvas-element ">
+            <div class="ball red"></div>
+            <div class="arrow" >&larr;</div>
+        </div>
+        <div class="canvas-element ">
+            <div class="ball green"></div>
+            <div class="arrow" >&larr;</div>
+        </div>
+        
+    </section>
+    <button>Reset</button>
+    
+    <script>
+               const section=document.querySelector('.canvas');
+    const reset=document.querySelector('button');
+
+    const canvasList=document.querySelectorAll('.canvas-element');
+    console.log(canvasList);
+    section.addEventListener('click',function(event){
+    event.preventDefault();
+    const canvasElement=event.target;
+    if(canvasElement.classList.contains('ball')){
+        const parent=canvasElement.parentNode;
+        console.log(parent);
+        parent.style.justifyContent='flex-start';
+        canvasElement.classList.add('grey');
+    }
+    });
+
+    reset.addEventListener('click',function(event){
+    event.preventDefault();
+    canvasList.forEach(element => {
+        const ball=element.querySelector('.ball');
+        console.log(element);
+        ball.classList.remove('grey');
+        element.style.justifyContent='space-between';
+    });
+    })
+    </script>
+</body>
+</html>
