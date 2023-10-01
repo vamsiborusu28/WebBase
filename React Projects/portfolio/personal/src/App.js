@@ -21,7 +21,7 @@ function App(){
             <nav className='flex items-center justify-center'>
                 <ul className="flex justify-around items-center gap-[50px] text-2xl">
                     <li>
-                      <Link to='/'>Home</Link>
+                      <Link to='/home'>Home</Link>
                     </li>
                     <li>
                     <Link to='/about'>About</Link>
@@ -34,11 +34,11 @@ function App(){
             
         </header>
 
-        <Header></Header>
+        
 
             <Routes>
-
-                <Route path='/' element={<Home></Home>}></Route>
+            <Header></Header>
+                <Route path='/home' element={<Home></Home>}></Route>
                 <Route path='/about' element={<About></About>}></Route>
                 <Route path='/contact' element={<Contact></Contact>}></Route>
             </Routes>
