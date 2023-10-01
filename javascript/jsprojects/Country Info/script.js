@@ -134,11 +134,11 @@ const callback=function(entries,observer){
         searchBar.style.position='flex';
     }
 }
-const observer=new IntersectionObserver(callback,{
-    root:null,
-    threshold:0,
-    rootMargin:'30px'
-})
+// const observer=new IntersectionObserver(callback,{
+//     root:null,
+//     threshold:0,
+//     rootMargin:'30px'
+// })
 
-observer.observe(searchBar);
+// observer.observe(searchBar);
 submitBtn.addEventListener('click',getCountry)
